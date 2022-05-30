@@ -44,9 +44,9 @@ const Exchanges = () => {
     <div className="heading">
       <p>#</p>
       <p className='coin-name'>Name</p>
-      <p>Trust Score</p>
-      <p>Country</p>
-      <p className='hide-mobile'>Volume/BTC</p>
+      <p className='hide-mobile'>Trust Score</p>
+      <p className='hide-mobile'>Country</p>
+      <p >Volume/BTC</p>
       <p className='hide-mobile'> Established </p>
     </div>
 
@@ -59,7 +59,7 @@ const Exchanges = () => {
             <img src={exchange.image} alt='exchange-logo'/>
             <p>{exchange.name}</p>
           </div>
-          <p>{exchange.trust_score}</p>
+          <p className='hide-mobile'>{exchange.trust_score}</p>
           <p className='hide-mobile'>{exchange.country}</p>
           <p>₿ {exchange.trade_volume_24h_btc.toFixed(2)}</p>
           <p className='hide-mobile'>{exchange.year_established}</p>
